@@ -1,0 +1,312 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos para los tabs */
+.tab {
+  display: flex;
+  justify-content: center;
+  background-color: #2c3e50;
+}
+
+.tab button {
+  background-color: inherit;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.tab button:hover {
+  background-color: #1B3147;
+}
+
+.tab button.active {
+  background-color: #3498db;
+}
+
+.tabcontent {
+  display: none;
+  padding: 20px;
+  border-top: none;
+  background-color: white;
+}
+
+/* Estilos para el formulario */
+#Formulario {
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+#Formulario h3 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+#Formulario form {
+  display: flex;
+  flex-direction: column;
+}
+
+#Formulario label {
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+#Formulario input[type="text"],
+#Formulario input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#Formulario fieldset {
+  border: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+#Formulario legend {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#Formulario input[type="radio"] {
+  margin-right: 10px;
+}
+
+#Formulario button {
+  padding: 10px 15px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#Formulario button:hover {
+  background-color: #2c3e50;
+}
+
+/* Estilos para el contenido del tab de Compras */
+#Compras {
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 20%;
+  margin: 20px auto;
+}
+
+#Compras h3 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+#Compras ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+#Compras ul li {
+  background-color: #f9f9f9;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 0 auto;
+
+}
+
+#lista-compras{
+  margin: 0 auto;
+}
+
+/* Estilos para el contenido del tab de PagoProveedores */
+#PagoProveedores {
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+#PagoProveedores h3 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+#PagoProveedores form {
+  display: flex;
+  flex-direction: column;
+}
+
+#PagoProveedores label {
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+#PagoProveedores input[type="number"],
+#PagoProveedores input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#PagoProveedores button {
+  padding: 10px 15px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#PagoProveedores button:hover {
+  background-color: #2c3e50;
+}
+
+/* Estilos para el contenido del tab de Informes */
+#Informes {
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 40%;
+  margin: 20px auto;
+}
+
+#Informes h3 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+#totales p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+#totales span {
+  font-weight: bold;
+  color: #3498db;
+}
+
+#total-tipo-pago {
+  padding-left: 20px;
+}
+
+#total-tipo-pago p {
+  margin: 5px 0;
+}
+
+#PagosProveedores h3 {
+  margin-top: 30px;
+  text-align: center;
+  color: #2c3e50;
+}
+
+#pagos-proveedores-info p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+#Informes button {
+  display: block;
+  width: 200px;
+  margin: 20px auto;
+  padding: 10px 15px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#Informes button:hover {
+  background-color: #2c3e50;
+}
+
+/* Estilos para el contenido del tab de Grafico */
+#Grafico {
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 20px auto;
+}
+
+#Grafico h3 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+#Grafico canvas {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%; /* Ajusta el ancho máximo al contenedor */
+  height: auto; /* Ajusta automáticamente la altura */
+}
+
+
+.eliminar-btn {
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.eliminar-btn:hover {
+  background-color: #cc0000;
+}
+/* Responsive design */
+@media (max-width: 480px) {
+  #Formulario,
+  #Compras,
+  #PagoProveedores,
+  #Informes,
+  #Grafico {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+
+  #Formulario button,
+  #PagoProveedores button,
+  #Informes button {
+    width: 100%;
+  }
+
+  .tab button{
+    width: auto;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}

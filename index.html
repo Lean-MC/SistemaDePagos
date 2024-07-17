@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web de Compras</title>
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="tab">
+    <button id="defaultOpen" class="tablinks" onclick="openTab(event, 'Formulario')">Ventas</button>
+    <button class="tablinks" onclick="openTab(event, 'PagoProveedores')">Pagos</button>
+    <button class="tablinks" onclick="openTab(event, 'Compras')">Historial</button>
+    <button class="tablinks" onclick="openTab(event, 'Informes')">Informes</button>
+    <button class="tablinks" onclick="openTab(event, 'Grafico')">Graficos</button>
+</div>
+
+<div id="Formulario" class="tabcontent">
+  <h3>Ventas</h3>
+  <form>
+    <label for="precio">Precio:</label>
+    <input type="text" id="precio" name="precio" inputmode="numeric" pattern="[0-9]*\.?[0-9]*" title="Ingrese un número válido">
+    <fieldset>
+      <legend>Tipo de Pago:</legend>
+      <input type="radio" id="pago-efectivo" name="tipoPago" value="Efectivo">
+      <label for="pago-efectivo">Efectivo</label><br>
+      <input type="radio" id="pago-transferencia-mp" name="tipoPago" value="Transferencia MP">
+      <label for="pago-transferencia-mp">Transferencia MP</label><br>
+      <input type="radio" id="pago-posnet-mp" name="tipoPago" value="Posnet MP">
+      <label for="pago-posnet-mp">Posnet MP</label><br>
+      <input type="radio" id="pago-tarjeta-debito" name="tipoPago" value="Tarjeta Debito">
+      <label for="pago-tarjeta-debito">Tarjeta Debito</label><br>
+      <input type="radio" id="pago-tarjeta-credito" name="tipoPago" value="Tarjeta Credito">
+      <label for="pago-tarjeta-credito">Tarjeta Credito</label><br>
+      <input type="radio" id="pago-cuenta-dni" name="tipoPago" value="Cuenta DNI">
+      <label for="pago-cuenta-dni">Cuenta DNI</label><br>
+    </fieldset><br>
+    <button type="button" onclick="guardarCompra()">Guardar Compra</button>
+  </form>
+</div>
+
+
+<div id="Compras" class="tabcontent">
+  <h3>Ventas</h3>
+  <ul id="lista-compras"></ul>
+  <h3>Pagos a Proveedores</h3>
+  <ul id="lista-pagos"></ul>
+</div>
+
+<div id="PagoProveedores" class="tabcontent">
+  <h3>Pago a Proveedores</h3>
+  <form>
+    <label for="cantidad">Cantidad:</label>
+    <input type="number" id="cantidad" name="cantidad" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+    <label for="motivo">Motivo:</label>
+    <input type="text" id="motivo" name="motivo"><br><br>
+    <button type="button" onclick="realizarPago()">Realizar Pago</button>
+  </form>
+</div>
+
+<div id="Informes" class="tabcontent">
+  <h3>Informes Ventas</h3>
+  <div id="totales">
+    <p>Total de Compras: <span id="total-compras">0</span></p>
+    <div id="total-tipo-pago">
+      <p>Total Efectivo: <span id="total-efectivo">0</span></p>
+      <p>Total Transferencia MP: <span id="total-transferencia-mp">0</span></p>
+      <p>Total Posnet MP: <span id="total-posnet-mp">0</span></p>
+      <p>Total Tarjeta Debito: <span id="total-tarjeta-debito">0</span></p>
+      <p>Total Tarjeta Credito: <span id="total-tarjeta-credito">0</span></p>
+      <p>Total Cuenta DNI: <span id="total-cuenta-dni">0</span></p>
+    </div>
+    <p>Total Recaudado: $<span id="total-recaudado">0</span> pesos</p>
+    <div id="PagosProveedores">
+      <h3>Pagos a Proveedores</h3>
+      <div id="pagos-proveedores-info">
+        <p>Total Pagos a Proveedores: <span id="total-pagos-proveedores">0</span></p>
+        <p>Cantidad Total: $<span id="cantidad-total-proveedores">0.00</span></p>
+      </div>
+    </div>
+    <button onclick="exportarExcel()">Descargar Informe</button>
+  </div>
+</div>
+
+<div id="Grafico" class="tabcontent">
+  <h3>Balance de pagos</h3>
+  <canvas id="ventasChart" width="400" height="200"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.17.4/dist/xlsx.full.min.js"></script>
+<script src="app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+</html>
